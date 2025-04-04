@@ -1,0 +1,293 @@
+body{
+    background:#F7F4F3;
+}
+div#header_wrap {
+    width: 100%;
+    height: 90px; /*펼쳤을때높이240px,닫혔을때높이90px*/
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 90px,
+      rgba(255, 255, 255, 1) 90px,
+      rgba(255, 255, 255, 1) 100%
+    );
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+  }
+/*비주얼영역시작*/
+div#visual_wrap{
+    width:100%;
+    height:880px;
+    display:flex;
+    justify-content:center;
+    background:url(/jejureborngil/images/reserve_visual_img_01.png) no-repeat center;
+    background-size:cover;
+}
+section#visual{
+    width:96%;
+    height:100%;
+    /* background:pink; */
+    position:relative;
+    left:0px;
+    top:0px;
+}
+h2.visual_title{
+    font:bold 100px 'Pretendard';
+    color:white;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+}
+/*비주얼영역끝*/
+/*컨텐츠영역시작*/
+div#reserve_wrap{
+    width:100%;
+    min-height:1000px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+section#reserve{
+    width:1600px;
+    height:auto;
+    /* background:pink; */
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+}
+div#button_wrap{
+    width:100%;
+    height:244px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:blue;
+}
+a#date_btn{
+    display:block;
+    width:840px;
+    height:24px;
+    font:500 20px 'Pretendard';
+    color:#888888;
+    border:none;
+    background:red;
+}
+#datePicker {
+    display: none; /* 실제 input 숨기기 */
+}
+#date_btn {
+    cursor: pointer;
+    /* 추가 스타일링 */
+}
+/* Flatpickr 캘린더 커스텀 스타일링 */
+div.flatpickr-calendar {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position:absolute;
+    top:500px;
+    left:500px;
+    width:500px;
+    height:600px;
+}
+i{
+    font-size:16px;
+    margin-left:16px;
+}
+div#date_select{
+    width:990px;
+    height:630px;
+    background:greenyellow;
+    position:fixed;
+    z-index:99;
+    border-radius:32px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    /* display:none; */
+}
+div#date_select img{
+    width:100%;
+    height:100%;
+    display:block;
+    /* object-fit:cover; */
+}
+div#course_wrap{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+}
+div#course_wrap::before{
+    content:"";
+    z-index:-1;
+    /* display:block; */
+    width:1100px;
+    height:1020px;
+    background:#eeeeee;
+    position:absolute;
+    left:-160px;
+    top:0px;
+}
+p#title{
+    font:500 40px 'Pretendard';
+    margin-top:128px;
+}
+p#title::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:3px;
+    background:black;
+    margin-top:40px;
+}
+div#courselist_wrap{
+    width:1120px;
+    height:1120px;
+    margin-top:128px;   
+}
+ul#course_list{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+ul#course_list li{
+    justify-self: center;
+    align-self: center;
+    width:540px;
+    height:540px;
+    background:salmon;
+    border-radius:32px;
+    position:relative;
+    left:0px;
+    top:0px;
+    overflow:hidden;
+}
+div.img_wrap{
+    width:100%;
+    height:100%;
+}
+div.img_wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+div.text_wrap{
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:220px;
+    background:rgba(1, 1, 1, 0.4);
+    padding:32px;
+    box-sizing:border-box;
+    backdrop-filter:blur(2px);
+}
+p.course_num{   
+    font:normal 20px 'Pretendard';
+    color:white;
+    margin-top:20px;
+}
+p.course_title{
+    font:500 40px 'Pretendard';
+    color:white;
+    margin-top:4px;
+}
+button.reserve_btn{
+    position:absolute;
+    right:32px;
+    bottom:32px;
+    font:normal 20px 'Pretendard';
+    color:white;
+    background:none;
+    border:none;
+    border-bottom:solid 1px white;
+    padding-bottom:8px;
+}
+div#guidelines_wrap{
+    width:100%;
+    height:340px;
+    margin-top:112px;
+    background:#eeeeee;
+    display:flex;
+    justify-content:center;
+}
+section#guidelines{
+    width:1600px;
+    height:100%;
+    padding:64px;
+    box-sizing:border-box;
+}
+p.guide_title{
+    font:500 24px 'Pretendard';
+    margin-bottom:24px;
+}
+p.guide_text{
+    font:normal 20px/1.9em 'Pretendard';
+}
+/*컨텐츠영역끝*/
+/*미디어커리시작*/
+@media screen and (max-width:1600px){
+    section#reserve{
+        width:100%;
+    }
+    section#guidelines{
+        width:100%;
+    }
+
+    div#courselist_wrap{
+        width:70%;
+        height:auto;
+    }
+    ul#course_list{
+        gap:16px;
+    }
+    ul#course_list li{
+        width:100%;
+        height:100%;
+    }
+    div.text_wrap{
+        height:43%;
+        padding:1.8vw;
+    }
+    p.course_num{
+        margin-top:1vw;
+    }
+    p.course_title{
+        font-size:2.5vw;
+    }
+    button.reserve_btn{
+        font-size:1.25vw;
+    }
+}
+@media screen and (max-width:980px){
+    div#course_wrap{
+        flex-direction:column;
+        padding:42px;
+        box-sizing:border-box;
+    }
+    div#courselist_wrap{
+        width:100%;
+    }
+    div.text_wrap{
+        padding:2.4vw;
+    }
+    p.course_num{
+        font-size:2vw;
+    }
+    button.reserve_btn{
+        font-size:2vw;
+    }
+    div#guidelines_wrap{
+        height:auto;
+    }
+}
+/*미디어커리끝*/

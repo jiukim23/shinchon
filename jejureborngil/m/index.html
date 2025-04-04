@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주리본길</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="/jejureborngil/m/css/reset.css" />
+    <link rel="stylesheet" href="/jejureborngil/m/css/common.css" />
+    <link rel="stylesheet" href="/jejureborngil/m/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js "></script>
+
+    <script src="/jejureborngil/m/js/swiper.js"></script>
+    <script src="/jejureborngil/m/js/mobilemenu.js"></script>
+    <style>
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        /* width: 300px;
+      height: 300px; */
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+      .mySwiper .swiper-slide:not(.swiper-slide-active) {
+        filter: blur(2px);
+        transition: filter 0.3s;
+      }
+      .courseSwiper .swiper-slide {
+        width: 278px;
+        height: 384px;
+        background: #882525;
+        line-height: 300px;
+        text-align: center;
+      }
+      /* 페이지 도트 기본 색 */
+      .swiper-pagination-bullet {
+        background-color: #c8c8c8;
+      }
+      /* 활성화된 페이지 도트 색 */
+      .swiper-pagination-bullet-active {
+        background-color: white; /* 원하는 색으로 수정 */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="hidden">제주리본길</h1>
+      <div id="menu_bar">
+        <h2 class="hidden">전체메뉴</h2>
+      </div>
+      <nav id="mobilemenu">
+        <h2 class="hidden">전체메뉴</h2>
+        <div id="mobilemenulogo_wrap">
+          <a href="https://truen.co.kr/" target="_blank">JEJUREBORNGIL</a>
+          <span id="mobileclose_btn">
+            <a href="#;">
+              <img src="/jejureborngil/m/images/closebtn.png" alt="닫기" />
+            </a>
+          </span>
+        </div>
+        <ul id="mobilemenu_list">
+          <li>
+            <button aria-expanded="false">리본길</button>
+            <ul class="mobilemenu_sublist">
+              <li><a href="#">리본길소개</a></li>
+              <li><a href="#">관련기사</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </li>
+          <li>
+            <button aria-expanded="false">프로그램</button>
+            <ul class="mobilemenu_sublist">
+              <li><a href="#">코스소개</a></li>
+              <li><a href="#">행사소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <button aria-expanded="false">참여신청</button>
+            <ul class="mobilemenu_sublist">
+              <li><a href="#">서브메뉴</a></li>
+              <li><a href="#">서브메뉴</a></li>
+              <li><a href="#">서브메뉴</a></li>
+            </ul>
+          </li>
+          <li>
+            <button aria-expanded="false">문의하기</button>
+            <ul class="mobilemenu_sublist">
+              <li><a href="#">고객문의</a></li>
+              <li><a href="#">제휴문의</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div id="mobile_grayLayer"></div> -->
+    </header>
+    <main>
+      <!--모바일에서 많이 사용하는 레이아웃 요소-->
+      <div id="logo">
+        JEJU
+        <br />
+        REBORNGIL
+      </div>
+      <div id="brand_wrap">
+        <div id="brand_visual">
+          <img src="/jejureborngil/m/images/main_image.png" />
+        </div>
+        <div id="brand_text">
+          <p class="title_text maincolor" id="brand_title">
+            옛 추억을 간직한
+            <br />
+            동네 해설사가 들려주는
+            <br />
+            진짜 제주이야기
+          </p>
+          <p class="subtitle_text maincolor" id="brand_text">
+            "오래 걸리더라도
+            <br />
+            같이 걷고싶어요"
+          </p>
+          <div id="brand_moreview">브랜드소개 더보기</div>
+        </div>
+      </div>
+      <!--brand_wrap 끝-->
+      <div id="course_wrap" class="swiper courseSwiper">
+        <p class="title_text" id="course_title">제주리본길 코스소개</p>
+        <ul id="course_list" class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#">
+              <img
+                src="/jejureborngil/m/images/main_course00.png"
+                alt="1코스 성안올레길"
+              />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#">
+              <img
+                src="/jejureborngil/m/images/main_course01.png"
+                alt="2코스 삼성혈과 제주성 오현단"
+              />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#">
+              <img
+                src="/jejureborngil/m/images/main_course02.png"
+                alt="3코스 원도심 43흔적 걸어보기"
+              />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#">
+              <img
+                src="/jejureborngil/m/images/main_course03.png"
+                alt="4코스 산방산과 용머리해안"
+              />
+            </a>
+          </li>
+        </ul>
+        <div id="dot_list" class="swiper-pagination"></div>
+        <div class="moreview_btn">PROGRAMS</div>
+      </div>
+      <!--course_wrap 끝-->
+      <div id="event_wrap">
+        <div id="eventtitle_wrap">
+          <div id="eventtitle_bg"></div>
+          <p id="event_title" class="title_text">이달의 행사</p>
+        </div>
+        <div id="eventtext_wrap">
+          <p id="event_subtitle">사랑팡제주</p>
+          <p id="event_text">
+            소멸위기 언어 제주어의 가치를 공유하고 알리는
+            <br />
+            제주어 주민예술음악회
+          </p>
+          <div id="eventbanner">
+            <p id="event_date">2024.05.29 오전 11시 ~ 12시</p>
+            <p id="eventbanner_title">제주어 가족음악회</p>
+            <div id="eventbanner_moreview">행사 자세히보기</div>
+          </div>
+          <div id="event_moreview_btn">VIEW</div>
+        </div>
+      </div>
+      <!--event_wrap끝-->
+      <div id="gallery_wrap" class="swiper mySwiper">
+        <p class="title_text maincolor" id="gallery_title">리본길 갤러리</p>
+        <ul id="gallery_list" class="swiper-wrapper">
+          <li class="swiper-slide">
+            <img
+              src="/jejureborngil/m/images/Gallery_img_01.png"
+              alt="보말죽"
+            />
+          </li>
+          <li class="swiper-slide">
+            <img
+              src="/jejureborngil/m/images/Gallery_img_02.png"
+              alt="동백꽃"
+            />
+          </li>
+          <li class="swiper-slide">
+            <img
+              src="/jejureborngil/m/images/Gallery_img_03.png"
+              alt="액자만들기"
+            />
+          </li>
+          <li class="swiper-slide">
+            <img
+              src="/jejureborngil/m/images/Gallery_img_03.png"
+              alt="액자만들기"
+            />
+          </li>
+        </ul>
+      </div>
+      <!--gallery_wrap끝-->
+      <div id="promotion_wrap">
+        <p class="title_text maincolor" id="promo_title">특별한 제주여행</p>
+        <div id="promoarticle_wrap">
+          <article class="promo_article">
+            <h3 class="hidden">맛집추천리스트</h3>
+            <p class="promo_subtitle maincolor">맛조수다게</p>
+            <p class="promo_text maincolor">제주민들이 추천하는 진짜 맛집</p>
+            <ul class="shop_list">
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/food_img_01.png"
+                    alf="메밀국수"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">한라산아래첫마을</p>
+                  <p class="shop_cate">한식</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/food_img_02.png"
+                    alt="오이오징어냉국"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">해림식당</p>
+                  <p class="shop_cate">한식</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/cafe_img_01.png"
+                    alt="무화과빙수"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">차 한모금</p>
+                  <p class="shop_cate">카페</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/cafe_img_02.png"
+                    alt="양갱플레이트"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">중섭의집</p>
+                  <p class="shop_cate">카페</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <article class="promo_article">
+            <h3 class="hidden">명소추천리스트</h3>
+            <p class="promo_subtitle maincolor">놀멍놀멍 봅서</p>
+            <p class="promo_text maincolor">
+              나만 알고 싶은 제주의 명소 즐기기
+            </p>
+            <ul class="shop_list">
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/spot_img_01.png"
+                    alt="거린오름"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">거린오름</p>
+                  <p class="shop_cate">오름</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/spot_img_02.png"
+                    alt="산굼부리"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">산굼부리</p>
+                  <p class="shop_cate">고개</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/spot_img_03.png"
+                    alt="정모시쉼터"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">정모시쉼터</p>
+                  <p class="shop_cate">관람,체험</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/spot_img_04.png"
+                    alt="황우치해안"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">황우치해안</p>
+                  <p class="shop_cate">해안</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <article class="promo_article">
+            <h3 class="hidden">숙소추천리스트</h3>
+            <p class="promo_subtitle maincolor">폭싹 속았수다</p>
+            <p class="promo_text maincolor">휴식도 제주스럽게 편안한 하룻밤</p>
+            <ul class="shop_list">
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/stay_img_01.png"
+                    alt="신라호텔"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">신라호텔</p>
+                  <p class="shop_cate">호텔</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/stay_img_02.png"
+                    alt="씨에스호텔앤리조트"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">씨에스호텔앤리조트</p>
+                  <p class="shop_cate">독채펜션</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/stay_img_03.png"
+                    alt="루시드봉봉"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">루시드봉봉</p>
+                  <p class="shop_cate">민박</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="shopimg_wrap">
+                  <img
+                    src="/jejureborngil/images/stay_img_04.png"
+                    alt="괜찮아게스트하우스"
+                  />
+                </div>
+                <div class="shoptext_wrap">
+                  <p class="shop_name">괜찮아게스트하우스</p>
+                  <p class="shop_cate">민박</p>
+                  <p class="shop_adress">
+                    6937 N East Street, Ettiecester 98620-3747
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p id="footer_logo">JEJUREBORNGIL</p>
+      <p id="footer_text">
+        Jeju Reborngil | CEO : Sung Gil Kim
+        <br />
+        Address : 2F, 9, Chilseongno-gil, Jeju-si, Jeju-do, Republic of Korea
+        <br />
+        Business Registration No.:
+        <br />
+        <br />
+        Product Inquiry : 064-799-1015 |
+        <br />
+        E-mail : rebornjeju@daum.net
+      </p>
+    </footer>
+  </body>
+</html>

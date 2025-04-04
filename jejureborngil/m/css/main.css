@@ -1,0 +1,364 @@
+div#logo {
+  width: 308px;
+  height: 134px;
+  font: bold 56px 'Pretendard';
+  color: white;
+  background: black;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+main {
+  width: 100%;
+  min-height: 600px;
+}
+p.title_text {
+  font: bold 32px 'Pretendard';
+}
+p.subtitle_text {
+  font: normal 20px 'Pretendard';
+}
+p.maincolor {
+  color: #103b33;
+}
+div#brand_wrap {
+  width: 100%;
+  height: 786px;
+  margin-top: 504px;
+  border-radius: 32px 32px 0px 0px;
+  overflow: hidden;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  background: #103bbb;
+}
+div#brand_visual {
+  width: 100vw;
+  height: 386px;
+}
+div#brand_visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div#brand_text {
+  width: 100vw;
+  height: 538px;
+  background: white;
+  border-radius: 64px 0px 0px 0px;
+  position: absolute;
+  top: 248px;
+  box-sizing: border-box;
+  padding: 56px 16px;
+}
+p#brand_title {
+  text-align: right;
+  margin-bottom: 72px;
+}
+p#brand_text {
+  text-align: center;
+}
+div#brand_moreview {
+  width: 32px;
+  height: 32px;
+  background: url(/jejureborngil/m/images/brand_moreview_icon.png) no-repeat
+    center;
+  text-indent: -9999px;
+  margin: 40px auto;
+}
+/* 브랜드영역 끝 */
+/* 코스영역 시작 */
+div#course_wrap {
+  width: 100vw;
+  height: 866px;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 45, 39, 1) 0%,
+    rgba(38, 137, 119, 1) 100%
+  );
+  box-sizing: border-box;
+  padding: 56px 16px;
+}
+p#course_title {
+  width: 100%;
+  height: 38px;
+  color: white;
+  text-align: center;
+  margin-bottom: 44px;
+}
+ul#course_list {
+  width: 1136px;
+  height: 384px;
+  display: flex;
+  justify-content: space-between;
+}
+ul#course_list > li {
+  width: 278px;
+  height: 384px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+}
+ul#course_list > li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+ul#course_list > li a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* overflow를 visible로 설정 */
+  /* overflow-clip-margin: 0px; */
+  /* overflow-clip-margin을 0으로 설정 */
+}
+div#dot_list {
+  position: static;
+  width: 100%;
+  height: 8px;
+  margin-top: 28px;
+  /* display: flex;
+  justify-content: space-between;
+  margin: 28px auto; */
+}
+/* ul#dot_list > li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c8c8c8;
+}
+ul#dot_list>li.selected{
+  background:#6c6c6c;
+} */
+div.moreview_btn {
+  width: 175px;
+  height: 46px;
+  border-radius: 16px 0px 16px 0px;
+  border: solid 2px white;
+  font: bold 16px 'Pretendard';
+  color: white;
+  text-align: center;
+  line-height: 46px;
+  margin: 32px auto;
+}
+/* 코스영역 끝 */
+/* 이벤트영역 시작*/
+div#event_wrap {
+  width: 100vw;
+  height: 661px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  margin-top: -126px;
+  z-index: 1;
+}
+div#eventtitle_wrap {
+  width: 100vw;
+  height: 200px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+div#eventtitle_bg {
+  width: 94.44vw;
+  height: 200px;
+  background: black;
+  border-radius: 64px 0px 0px 0px;
+  float: right;
+}
+p#event_title {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 44px;
+}
+div#eventtext_wrap {
+  clear: both;
+  width: 100vw;
+  height: 535px;
+  background: white;
+  border-radius: 0px 64px 64px 0px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0px;
+  box-sizing: border-box;
+  padding: 44px 18px;
+}
+p#event_subtitle {
+  font: bold 24px 'Pretendard';
+  color: #103b33;
+  margin-bottom: 8px;
+}
+p#event_text {
+  font: normal 16px 'Pretendard';
+  margin-bottom: 48px;
+}
+div#eventbanner {
+  width: 328px;
+  height: 166px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 28px 20px;
+  color: white;
+}
+p#event_date {
+  font: normal 14px 'Pretendard';
+  margin-bottom: 19px;
+}
+p#eventbanner_title {
+  font: bold 28px 'Pretendard';
+  margin-bottom: 17px;
+}
+div#eventbanner_moreview {
+  width: 24px;
+  height: 24px;
+  background: url(/jejureborngil/m/images/eventbanner_moreview.png) no-repeat
+    center;
+  text-indent: -9999px;
+}
+div#event_moreview_btn {
+  width: 175px;
+  height: 46px;
+  border-radius: 16px 0px 16px 0px;
+  border: solid 2px #0d2d27;
+  color: #0d2d27;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 112px;
+  font: bold 16px 'Pretendard';
+  text-align: center;
+  line-height: 46px;
+}
+/* 이벤트영역 끝 */
+/* 갤러리영역 시작 */
+div#gallery_wrap {
+  width: 100vw;
+  height: 587px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+p#gallery_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 112px;
+}
+ul#gallery_list {
+  /* width: 614px; */
+  width: 100%;
+  height: 220px;
+  /* position: absolute; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  top: 194px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+ul#gallery_list > li {
+  width: 192px;
+  /* 큰거 216 작은애들 183 */
+  height: 192px;
+  background: #d9d9d9;
+  margin-top: 14px;
+  /* filter: blur(2px); */
+}
+ul#gallery_list > li img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* ul#gallery_list > li.selected {
+  width: 216px;
+  height: 220px;
+  background: #d9d9d9;
+  margin-top: 0px;
+  filter: none;
+} */
+/* 갤러리영역 끝 */
+/* 프로모션영역 시작 */
+div#promotion_wrap {
+  width: 100vw;
+  height: 2000px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  box-sizing: border-box;
+  padding: 0px 16px;
+}
+p#promo_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 201px;
+  height: 38px;
+}
+div#promoarticle_wrap {
+  width: 91.11vw;
+  height: 1891px;
+  position: absolute;
+  top: 94px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+p.promo_subtitle {
+  font: 500 24px 'Pretendard';
+  margin-bottom: 4px;
+}
+p.promo_text {
+  font: 500 20px 'Pretendard';
+  margin-bottom: 16px;
+}
+article.promo_article {
+  margin-bottom: 56px;
+}
+ul.shop_list {
+  width: 100%;
+  height: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+ul.shop_list > li {
+  width: 100%;
+  height: 252px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 8px;
+}
+div.shopimg_wrap {
+  width: 100%;
+  height: 140px;
+  background: #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+div.shopimg_wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+div.shoptext_wrap {
+  text-align: center;
+}
+p.shop_name {
+  font: 500 14px 'Pretendard';
+  margin-bottom: 4px;
+}
+p.shop_cate {
+  font: normal 12px 'Pretendard';
+  margin-bottom: 9px;
+}
+p.shop_adress {
+  font: normal 12px 'Pretendard';
+}
+/* 프로모션영역 끝 */
