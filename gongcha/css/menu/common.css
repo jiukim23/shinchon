@@ -1,0 +1,172 @@
+button{
+    all:unset;
+    cursor:pointer;
+}
+div#contents_wrap{
+    width:100%;
+    min-height:1000px;
+    margin-top:88px;
+    display: flex;
+    justify-content: center;
+    padding:112px 0px;
+    box-sizing: border-box;
+}
+div#contents{
+    width:1200px;
+}
+div#title_wrap{
+    width:100%;
+    height:117px;
+    margin-bottom:112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+p.cate_title{
+    font:600 48px 'pretendard';
+    text-align: center;
+}
+p.cate_subtitle{
+    font:600 20px 'pretendard';
+    text-align:center;
+}
+div#nav_wrap{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+nav.menu_category{
+    height:22px;
+    margin-bottom:116px;
+}
+nav#beverage_category{
+    width:958px;
+}
+nav#dessert_category{
+    width:348px;
+}
+nav#md_category{
+    width:192px;
+}
+ul.menubtn_list{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+}
+ul.menubtn_list>li>button{
+    font:600 20px 'pretendard';
+}
+ul.menubtn_list>li.selected{
+    color:#a1011b;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+ul.menubtn_list>li.selected::after{
+    content: "";
+    display: block;
+    width:100%;
+    height:4px;
+    background:#a1011b;
+    position: absolute;
+    left:0px;
+    bottom:-16px;
+}
+section{
+    width:100%;
+    height:auto;
+}
+h2.section_name{
+    font:600 28px 'pretendard';
+    margin-bottom:52px;
+}
+.menu_article{
+    width:100%;
+    height:auto;
+    margin-bottom:72px;
+}
+div.articlename_wrap{
+    width:100%;
+    height:60px;
+    background:#a1011b;
+    margin-bottom:40px;
+}
+h3.article_name{
+    font:600 22px/60px 'pretendard';
+    color:white;
+    text-align: center;
+}
+ul.article_list{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction:row;
+    gap:58px;
+    flex-wrap: wrap;
+}
+ul.article_list>li{
+    width:255px;
+    height:368px;
+}
+div.menuimg_wrap{
+    width:100%;
+    height:300px;
+    background:white;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+a.menu_img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+a.menu_img img{
+    width:100%;
+    height:100%;
+}
+a.menu_img div.view_box{
+    width:152px;
+    height:152px;
+    border-radius: 50%;
+    background:rgb(161, 1, 27, 0.7);
+    position:absolute;
+    left:50%;
+    top:50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div.view_box>p{
+    font:600 18px 'pretendard';
+    color:white;
+    margin-bottom:8px;
+}
+div.view_box>span{
+    width:24px;
+    height:24px;
+    background:url(/gongcha/images/arrow_right_white.png) no-repeat center center;
+}
+
+p.menu_name{
+    width:100%;
+    height:68px;
+    font:500 18px 'pretendard';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width:1200px) {
+    div#contents{
+        width:100%;
+    }
+}

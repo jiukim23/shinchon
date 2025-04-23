@@ -56,6 +56,11 @@ h1#logo{
     position: absolute;
     left: 16px;
     top: 4px;
+}
+h1#logo>a{
+    display: block;
+    width:100%;
+    height:100%;
     text-indent: -9999px;
 }
 nav#mainmenu{
@@ -125,10 +130,9 @@ ul.submenu_list>li>a{
     display: block;
     /* opacity: 0; */
 }
-ul.submenu_list>li.activated>a{
+ul.submenu_list>li:hover >a{
     color:#a1011b;
 }
-
 a.franchise{
     display: block;
     width:108px;
@@ -142,116 +146,127 @@ a.franchise{
     font:500 20px/44px 'pretendard';
     text-align: center;
 }
-ul#sns_list{
+nav#snsmenu{
     width:112px;
     height:24px;
     position: absolute;
     right:0px;
     top:32px;
+}
+ul#snsmenu_list{
+    width:100%;
+    height:100%;
     display: flex;
     justify-content: space-between;
 }
-ul#sns_list>li{
+ul#snsmenu_list>li{
     width:24px;
     height:24px;
     background: black;
     text-indent: -9999px;
 }
-ul#sns_list>li>a{
+ul#snsmenu_list>li>a{
     display: block;
     width:100%;
     height:100%;
 }
-ul#sns_list>li:nth-child(1){
-    background: url(/gongcha/images/facebook.png);
+ul#snsmenu_list>li:nth-child(1){
+    background: url(/gongcha/images/sns_facebook.svg);
 }
-ul#sns_list>li:nth-child(2){
-    background: url(/gongcha/images/instagram.png);
+ul#snsmenu_list>li:nth-child(2){
+    background: url(/gongcha/images/sns_instagram.svg);
 }
-ul#sns_list>li:nth-child(3){
-    background: url(/gongcha/images/message-square.png);
+ul#snsmenu_list>li:nth-child(3){
+    background: url(/gongcha/images/sns_message.svg);
 }
 /* 상단영역 끝 */
 /* 하단영역 시작 */
 div#footer_wrap{
     width:100%;
-    height:320px;
-    background: #575757;
+    height:324px;
+    background: #a1011b;
     display: flex;
     justify-content: center;
 }
 footer{
     width:1200px;
     height:100%;
-    display: flex; 
+    display: flex;
+    align-items: center;
 }
-#footer_left{
-    width:248px;
-    height:100%;
-    position: relative;
-    left:0px;
-    top:0px;
+.ft_inner{
+    width:100%;
+    height:214px;
 }
-#footer_logo{
-    width:69px;
-    height:90px;
-    background: url(/gongcha/images/ft_logo.png)no-repeat center;
-    text-indent: -9999px;
-    margin-top:160px;
-    margin-left:56px;
+.ft_logo_sns{
+    width:100%;
+    height:38px;
+    margin-bottom:32px;
+    display: flex;
+    justify-content: space-between;
 }
-.copyright{
-    font:300 12px 'pretendard';
+.ft_logo_sns>a{
+    font:700 32px 'pretendard';
     color:white;
-    margin-top:20px;
 }
-#footer_menu{
-    width:952px;
+.ft_sns{
+    width:104px;
+    height:24px;
+    display: flex;
+    justify-content: space-between;
+}
+.ft_logo_sns>.ft_sns>a{
+    width:24px;
+    height:24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-indent: -9999px;
+}
+.ft_logo_sns>.ft_sns>a:nth-child(1){
+    background: url(/gongcha/images/ft_facebook.png);
+}
+.ft_logo_sns>.ft_sns>a:nth-child(2){
+    background: url(/gongcha/images/ft_instagram.png);
+}
+.ft_logo_sns>.ft_sns>a:nth-child(3){
+    background: url(/gongcha/images/ft_kakao.png);
+}
+.ft_info_wrap{
+    width:100%;
+    height:144px;
+    display: flex;
+    justify-content: space-between;
+}
+.ft_menu{
+    width:140px;
+    height:144px;
+    margin-left:8px;
+}
+ul.ft_menu_list{
+    width:100%;
     height:100%;
-    background:#D9D9D9;
-    padding:32px 44px;
-    box-sizing: border-box;
-    position: relative;
-    left:0px;
-    top:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-#contact_menu_list>li{
-    margin-bottom:12px;
+ul.ft_menu_list>li>a{
+    font:700 20px 'pretendard';
+    color:white;
 }
-#contact_menu_list>li>a{
-    font:500 14px 'pretendard';
-    color:#1E1E1E;
-    margin-right:28px;
+.ft_info{
+    width:372px;
+    height:132px;
+    margin-top:12px;
+    font:700 16px 'pretendard';
+    color:white;
 }
-#contact_menu_list>li>span.call_num{
-    display: inline-block;
-    width:112px;
-    height:19px;
-    font:500 14px 'pretendard';
-    color:#1E1E1E;
-    margin-right:36px;
+.ft_info address p{
+    margin-bottom:24px;
 }
-#contact_menu_list>li>span.contact_time{
-    font:400 14px 'pretendard';
-    color:#575757;
+.ft_info address p:nth-child(2){
+    margin-bottom:8px;
 }
-#ft_menu_list{
-    margin-top:47px;
-}
-#ft_menu_list>li{
-    margin-bottom:12px;
-}
-#ft_menu_list>li>a{
-    font:500 14px 'pretendard';
-    color:#1E1E1E;
-}
-address{
-    font:400 14px 'pretendard';
-    position:absolute;
-    right:44px;
-    bottom:50px;
-}
-address>p{
-    margin-bottom:12px;
-}
+
 /* 하단영역 끝 */

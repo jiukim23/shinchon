@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공차 메뉴/디저트</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js' integrity='sha512-2A1+/TAny5loNGk3RBbk11FwoKXYOMfAK6R7r4CpQH7Luz4pezqEGcfphoNzB7SM4dixUoJsKkBsB6kg+dNE2g==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js' integrity='sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="/gongcha/css/reset.css">
+    <link rel="stylesheet" href="/gongcha/css/common.css">
+    <link rel="stylesheet" href="/gongcha/css/menu/common.css">
+    <script src="/gongcha/js/menulist.js"></script>
+</head>
+<body>
+    <!-- 상단영역 시작 -->
+    <div id="header_wrap">
+        <header>
+            <h1 id="logo"><a href="/gongcha/index.html">공차</a></h1>
+            <nav id="mainmenu">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul id="mainmenu_list">
+                    <li>
+                        <a href="#">MENU</a>
+                        <ul class="submenu_list">
+                            <li><a href="/gongcha/menu/beverage.html">신메뉴</a></li>
+                            <li><a href="/gongcha/menu/beverage.html">음료</a></li>
+                            <li><a href="/gongcha/menu/dessert.html">디저트</a></li>
+                            <li><a href="#">MD상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">STORE</a>
+                        <ul class="submenu_list">
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MEMBERSHIP</a>
+                        <ul class="submenu_list">
+                            <li><a href="#">멤버십</a></li>
+                            <li><a href="#">공차카드</a></li>
+                            <li><a href="#">e-Gift</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                        <ul class="submenu_list">
+                            <li><a href="#">브랜드소개</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">공차소식</a></li>
+                            <li><a href="#">제휴서비스</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="franchise">가맹문의</a>
+            <nav id="snsmenu">
+                <h2 class="hidden">SNS메뉴</h2>
+                <ul id="snsmenu_list">
+                    <li><a href="#">페이스북</a></li>
+                    <li><a href="#">인스타그램</a></li>
+                    <li><a href="#">카카오톡</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- 상단영역 끝 -->
+    <!-- 본문영역 시작 -->
+    <div id="contents_wrap">
+        <div id="contents">
+            <div id="title_wrap">
+                <p class="cate_title">
+                    디저트
+                </p>
+                <p class="cate_subtitle">
+                    공차와 곁들이면 좋은 계절메뉴와 달콤한 디저트
+                </p>
+            </div>
+            <div id="nav_wrap">
+                <nav class="menu_category" id="dessert_category">
+                    <ul class="menubtn_list" id="dessertbtn_list">
+                        <li class="selected">
+                            <button>베이커리</button>
+                        </li>
+                        <li>
+                            <button>스낵</button>
+                        </li>
+                        <li>
+                            <button>아이스크림</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="section_wrap">
+                <section>
+                    <h2 class="section_name">베이커리</h2>
+                    <article class="menu_article">
+                        <div class="articlename_wrap">
+                            <h3 class="article_name">베이커리</h3>
+                        </div>
+                        <ul class="article_list">
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_scone.png" alt="시그니처 스콘">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    시그니처 스콘
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_taro.png" alt="타로 치즈 무스">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    타로 치즈 무스
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_tiramisu.png" alt="티라미수">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    티라미수
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_fireburrito.png" alt="불맛 매콤 바베큐 브리또">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    불맛 매콤 바베큐 브리또
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_hotburrito.png" alt="핫치킨 브리또">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    핫치킨 브리또
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_cheeseburrito.png" alt="치킨 치즈 브리또">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    치킨 치즈 브리또
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_cookiestick.png" alt="초코 쿠키 슈스틱">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    초코 쿠키 슈스틱
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_yogurtstick.png" alt="요구르트 쿠키 슈스틱">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    요구르트 쿠키 슈스틱
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_cookiecreamcake.png" alt="쿠키 앤 크림 스틱 치즈케익">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    쿠키 앤 크림 스틱 치즈케익
+                                </p>
+                            </li>
+                            <li>
+                                <div class="menuimg_wrap">
+                                    <a href="#" class="menu_img">
+                                        <img src="/gongcha/images/menu_dessert_cheesecake.png" alt="스틱 치즈케익">
+                                    </a>
+                                </div>
+                                <p class="menu_name">
+                                    스틱 치즈케익
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 본문영역 끝 -->
+    <!-- 하단영역 시작 -->
+    <div id="footer_wrap">
+        <footer>
+            <h2 class="hidden">하단메뉴</h2>
+            <div class="ft_inner">  
+                <div class="ft_logo_sns">
+                    <a href="#">GONGCHA</a>
+                    <div class="ft_sns">
+                        <a href="#">페이스북</a>
+                        <a href="#">인스타그램</a>
+                        <a href="#">카카오톡</a>
+                    </div>
+                </div>
+                <div class="ft_info_wrap">
+                    <div class="ft_menu">
+                        <ul class="ft_menu_list">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft_info">
+                        <address>
+                            <p>(주)공차코리아 서울 종로구 종로33길 15, 8층</p>
+                            <p>사업자등록번호 214-88-84534</p>
+                            <p>통신판매번호 2020-서울종로-0966</p>
+                        </address>
+                        <p class="copy">©GONGCHA KOREA CO.,LTD All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 하단영역 끝 -->
+</body>
+</html>

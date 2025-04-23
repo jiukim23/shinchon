@@ -1,0 +1,180 @@
+/* 기본설정 시작 */
+body,html{
+    height:100%;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+button {
+    all: unset;
+    cursor: pointer;
+  }
+button:focus {
+    outline: 2px solid black;
+    outline-offset: 2px;
+  }
+/* 기본설정 끝 */
+/* 상단영역 시작 */
+header{
+    width:100%;
+    height:80px;
+    position:relative;
+    left:0px;
+    top:0px;
+}
+#menu_bar{
+    width:100%;
+    height:100%;
+    background:white;
+    position:relative;
+    left:0px;
+    top:0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
+}
+h1.logo{
+    width:44px;
+    height:58px;
+    text-indent:-9999px;
+    background:url(/gongcha/images/mobile_logo.png) no-repeat center;
+}
+button.mobilemenu_btn{
+    width:28px;
+    height:28px;
+    overflow: hidden;
+    position: absolute;
+    right:16px;
+    background:url(/gongcha/images/mobilemenu_btn.svg) no-repeat center;
+    text-indent:-9999px;
+}
+button.mobilemenu_btn.active{
+    background:url(/gongcha/images/mobilemenu_x.svg) no-repeat center;
+}
+nav#mobilemenu{
+    display: none;
+    position: absolute;
+    right:0px;
+    top:80px;
+    width:100%;
+    height:calc(100vh - 80px);
+    background:white;
+    box-sizing: border-box;
+    z-index: 999;
+    overflow: scroll;
+}
+ul.mobilemenu_list{
+    width:100%;
+}
+ul.mobilemenu_list>li{
+    width:100%;
+    height:60px;
+    background:white;
+    position:relative;
+    left:0px;
+    top:0px;
+    overflow:hidden;
+}
+ul.mobilemenu_list>li.active{
+    height:auto;
+}
+ul.mobilemenu_list>li>button{
+    width:100%;
+    height:60px;
+    font:600 18px/60px 'pretendard';
+    text-indent:20px;
+    position:relative;
+    left:0px;
+    top:0px;
+}
+ul.mobilemenu_list>li.active>button{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+ul.mobilemenu_list>li>button::after{
+    content:"";
+    display:block;
+    width:24px;
+    height:24px;
+    background:url(/gongcha/images/mobilemenu_down.svg) no-repeat center;
+    position:absolute;
+    right:20px;
+    top:18px;
+}
+ul.mobilemenu_list>li.active>button::after{
+    transform: rotate(180deg);
+}
+
+ul.mobilemenu_list>li>a{
+    display:block;
+    font:500 18px/60px 'pretendard';
+    text-indent:20px;
+}
+ul.mobilesubmenu_list{
+    width:100%;
+}
+ul.mobilesubmenu_list>li{
+    width:100%;
+    height:52px;
+    background:#FFFAED;
+    text-indent:32px;
+}
+ul.mobilesubmenu_list>li>a{
+    font:400 16px/52px 'pretendard';
+}
+nav#snsmenu{
+    width:104px;
+    height:24px;
+    margin-left:20px;
+    margin-top:52px;
+    margin-bottom:52px;
+}
+ul.snsmenu_list{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+}
+ul.snsmenu_list>li{
+    width:24px;
+    height:24px;
+    background:white;
+    overflow:hidden;
+}
+ul.snsmenu_list>li>a{
+    width:100%;
+    height:100%;
+    display: block;
+    text-indent: -9999px;
+}
+ul.snsmenu_list>li:nth-child(1){
+    background:url(/gongcha/images/sns_facebook.svg) no-repeat center;
+}
+ul.snsmenu_list>li:nth-child(2){
+    background:url(/gongcha/images/sns_instagram.svg) no-repeat center;
+}
+ul.snsmenu_list>li:nth-child(3){
+    background:url(/gongcha/images/sns_message.svg) no-repeat center;
+}
+
+
+
+/* 상단영역 끝 */
+/* 메인영역 시작 */
+#visualsection{
+    width:100%;
+    height:600px;
+    background:burlywood;
+}
