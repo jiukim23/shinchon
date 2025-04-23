@@ -1,0 +1,16 @@
+div#title_wrap{
+    width:100%;
+    height:117px;
+    margin-bottom:112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+p.cate_title{
+    font:600 48px 'pretendard';
+    text-align: center;
+}
+p.cate_subtitle{
+    font:600 20px 'pretendard';
+    text-align:center;
+}

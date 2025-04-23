@@ -4,7 +4,6 @@ div#visual_wrap{
     height:850px;
     background:peachpuff;
     margin-top:88px;
-    /* overflow: hidden; */
 }
 ul#visual_list{
     width:100%;
@@ -111,7 +110,6 @@ span.view_btn{
     top:0px;
 }
 .sectionmenu_list li button{
-    all: unset;
     font:500 22px/50px 'pretendard';
 }
 .sectionmenu_list li.active button{

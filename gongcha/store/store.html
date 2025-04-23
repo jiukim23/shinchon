@@ -6,10 +6,13 @@
     <title>공차 메뉴/MD상품</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js' integrity='sha512-2A1+/TAny5loNGk3RBbk11FwoKXYOMfAK6R7r4CpQH7Luz4pezqEGcfphoNzB7SM4dixUoJsKkBsB6kg+dNE2g==' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js' integrity='sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==' crossorigin='anonymous'></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
     <link rel="stylesheet" href="/gongcha/css/reset.css">
     <link rel="stylesheet" href="/gongcha/css/common.css">
-    <link rel="stylesheet" href="/gongcha/css/menu/common.css">
+    <link rel="stylesheet" href="/gongcha/css/sub_common.css">
+    <link rel="stylesheet" href="/gongcha/css/store.css">
     <script src="/gongcha/js/menulist.js"></script>
+
 </head>
 <body>
     <!-- 상단영역 시작 -->
@@ -78,8 +81,88 @@
                     간편하게 공차의 매장을 검색해 보세요.
                 </p>
             </div>
-        
-            
+            <div id="map_wrap">
+                <section id="map_section">
+                    <h2 class="hidden">매장 검색하기</h2>
+                    <div id="kakaomap_wrap">
+                        <div id="daumRoughmapContainer1745391123437" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    </div>
+                    <nav id="store_nav">
+                        <div id="select_wrap">
+                            <select id="city">
+                                <option>시/도</option>
+                                <option>서울특별시</option>
+                                
+                            </select>
+                            <select id="district">
+                                <option>구/군</option>
+                            </select>
+                            <select id="branch">
+                                <option>매장명</option>
+                            </select>
+                            <button id="store_btn">검색</button>
+                        </div>
+                        <ul id="branch_list">
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name new_branch">강동아이파크더리버점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name new_branch">목동행복한점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name">롯데시네마대전센트럴점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name">거제수월점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name">광명역점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name">두산연강빌딩점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="branch_name">트레이더스 마곡점</p>
+                                    <address>서울 강동구 고덕비즈밸리로 51, 지1층
+                                        B108-2호(고덕동)</address>
+                                    <p class="branch_time">10:00-22:00</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
         </div>
     </div>
     <!-- 본문영역 끝 -->
@@ -118,5 +201,13 @@
         </footer>
     </div>
     <!-- 하단영역 끝 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1745391123437",
+            "key" : "2nsy4",
+            "mapWidth" : "100%",
+            "mapHeight" : "100%"
+        }).render();
+    </script>
 </body>
 </html>
