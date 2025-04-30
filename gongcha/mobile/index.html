@@ -4,14 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공차 프로젝트 모바일</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js' integrity='sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==' crossorigin='anonymous'></script>
 
     <link rel="stylesheet" href="/gongcha/css/reset.css">
     <link rel="stylesheet" href="/gongcha/css/mobile/common.css">
+    <link rel="stylesheet" href="/gongcha/css/mobile/main.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="/gongcha/js/mobilemenu.js"></script>
+    <script src="/gongcha/js/mobileswiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
-
+    <!-- 상단영역 시작 -->
+    <header>
+        <div id="menu_bar">
+            <h1 class="logo">공차</h1>
+            <button class="mobilemenu_btn"></button>
+        </div>
+        <nav id="mobilemenu">
+            <h2 class="hidden">모바일 메뉴</h2>
+            <ul class="mobilemenu_list">
+                <li>
+                    <button>MENU</button>
+                    <ul class="mobilesubmenu_list">
+                        <li><a href="/gongcha/menu/beverage.html">신메뉴</a></li>
+                        <li><a href="/gongcha/menu/beverage.html">음료</a></li>
+                        <li><a href="/gongcha/menu/dessert.html">디저트</a></li>
+                        <li><a href="/gongcha/menu/md.html">MD상품</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button>STORE</button>
+                    <ul class="mobilesubmenu_list">
+                        <li><a href="/gongcha/store/store.html">매장찾기</a></li>
+                        <li><a href="#">가맹문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button>MEMBERSHIP</button>
+                    <ul class="mobilesubmenu_list">
+                        <li><a href="#">멤버십</a></li>
+                        <li><a href="#">공차카드</a></li>
+                        <li><a href="#">e-Gift</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button>ABOUT</button>
+                    <ul class="mobilesubmenu_list">
+                        <li><a href="#">브랜드소개</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공차소식</a></li>
+                        <li><a href="#">제휴서비스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">가맹문의</a>
+                </li>
+            </ul>
+            <nav id="snsmenu">
+                <ul class="snsmenu_list">
+                    <li>
+                        <a href="#">페이스북</a>
+                    </li>
+                    <li>
+                        <a href="#">인스타그램</a>
+                    </li>
+                    <li>
+                        <a href="#">카카오톡</a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- 상단영역 끝 -->
     <!-- 메인영역 시작 -->
     <main>
         <section id="visualsection">
@@ -36,21 +108,43 @@
                     </li>
                 </ul>
             </nav>
-            <div id="menu_container">
-                <ul>
-                    <li>
+            <div id="menu_container" class="swiper mobile_swiper">
+                <ul class="menucard_list swiper-wrapper">
+                    <li class="swiper-slide">
                         <div class="menucard_inner">
                             <p class="menucard_name">납작 복숭아 아이스티 얼그레이</p>
                             <span class="menucard_en">
                                 PEACH<br>EARL<br>GREY
                             </span>
                             <span class="menucard_img">
-                                <img src="/gongcha/images/menu_peach.png" alt="피치얼그레이">
+                                <img src="/gongcha/images/menu_peachearlgrey.png" alt="피치얼그레이">
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="menucard_inner">
+                            <p class="menucard_name">납작 복숭아 아이스티 얼그레이</p>
+                            <span class="menucard_en">
+                                PEACH<br>EARL<br>GREY
+                            </span>
+                            <span class="menucard_img">
+                                <img src="/gongcha/images/menu_peachearlgrey.png" alt="피치얼그레이">
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="menucard_inner">
+                            <p class="menucard_name">납작 복숭아 아이스티 얼그레이</p>
+                            <span class="menucard_en">
+                                PEACH<br>EARL<br>GREY
+                            </span>
+                            <span class="menucard_img">
+                                <img src="/gongcha/images/menu_peachearlgrey.png" alt="피치얼그레이">
                             </span>
                         </div>
                     </li>
                 </ul>
-
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <section id="bestsection">

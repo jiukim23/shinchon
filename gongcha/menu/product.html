@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공차 제품페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js' integrity='sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js' integrity='sha512-2A1+/TAny5loNGk3RBbk11FwoKXYOMfAK6R7r4CpQH7Luz4pezqEGcfphoNzB7SM4dixUoJsKkBsB6kg+dNE2g==' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/gongcha/css/reset.css">
+    <link rel="stylesheet" href="/gongcha/css/common.css">
+    <link rel="stylesheet" href="/gongcha/css/product.css">
+    <script src="/gongcha/js/mainmenu.js"></script>
+
+</head>
+<body>
+    <!-- 상단영역 시작 -->
+    <div id="header_wrap">
+        <header>
+            <h1 id="logo"><a href="/gongcha/index.html">공차</a></h1>
+            <nav id="mainmenu">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul id="mainmenu_list">
+                    <li>
+                        <a href="/gongcha/menu/beverage.html">MENU</a>
+                        <ul class="submenu_list">
+                            <li><a href="/gongcha/menu/beverage.html">신메뉴</a></li>
+                            <li><a href="/gongcha/menu/beverage.html">음료</a></li>
+                            <li><a href="/gongcha/menu/dessert.html">디저트</a></li>
+                            <li><a href="/gongcha/menu/md.html">MD상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/gongcha/store/store.html">STORE</a>
+                        <ul class="submenu_list">
+                            <li><a href="/gongcha/store/store.html">매장찾기</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MEMBERSHIP</a>
+                        <ul class="submenu_list">
+                            <li><a href="#">멤버십</a></li>
+                            <li><a href="#">공차카드</a></li>
+                            <li><a href="#">e-Gift</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                        <ul class="submenu_list">
+                            <li><a href="#">브랜드소개</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">공차소식</a></li>
+                            <li><a href="#">제휴서비스</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="franchise">가맹문의</a>
+            <nav id="snsmenu">
+                <h2 class="hidden">SNS메뉴</h2>
+                <ul id="snsmenu_list">
+                    <li><a href="https://www.facebook.com/GongCha.Korea" target="_blank">페이스북</a></li>
+                    <li><a href="https://www.instagram.com/gongcha_korea/" target="_blank">인스타그램</a></li>
+                    <li><a href="https://pf.kakao.com/_Cywfxb" target="_blank">카카오톡</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- 상단영역 끝 -->
+    <!-- 컨텐츠영역 시작 -->
+    <div id="contents_wrap">
+        <div id="menupage_wrap">
+            <nav class="category_tree" aria-label="breadcrumb">
+                <h2 class="hidden">카테고리 목록</h2>
+                <ol class="categorytree_list">
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">딸기 말차 밀크티</a></li>
+                </ol>
+            </nav>
+            <div class="menuinfo_wrap">
+                <div class="menuimg_wrap">
+                    <img src="/gongcha/images/menu_strawmalcha.png" alt="딸기 말차 밀크티">
+                </div>
+                <div class="menudetail_wrap">
+                    <p class="menu_name">딸기 말차 밀크티</p>
+                    <p class="menu_price">5,300원</p>
+                    <div class="option_wrap">
+                        <ul class="option_list">
+                            <li>
+                              <p class="option_name">사이즈</p>
+                              <div class="select_wrap">
+                                <div class="custom_select open" data-type="size">
+                                  <span class="selected">선택</span>
+                                  <ul class="option_items">
+                                    <li data-value="L">L</li>
+                                    <li data-value="R">R</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <p class="option_name">당도</p>
+                              <div class="select_wrap">
+                                <div class="custom_select" data-type="sugar">
+                                  <span class="selected">선택</span>
+                                  <ul class="option_items">
+                                    <li data-value="0%">0%</li>
+                                    <li data-value="30%">30%</li>
+                                    <li data-value="50%">50%(추천)</li>
+                                    <li data-value="70%">70%</li>
+                                    <li data-value="100%">100%</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <p class="option_name">얼음 / HOT</p>
+                              <div class="select_wrap">
+                                <div class="custom_select" data-type="ice">
+                                  <span class="selected">ICE고정</span>
+                                  <ul class="option_items">
+                                    <li data-value="ICE고정">ICE고정</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <p class="option_name">토핑</p>
+                              <div class="select_wrap">
+                                <div class="custom_select" data-type="topping">
+                                  <span class="selected">선택</span>
+                                  <ul class="option_items">
+                                    <li data-value="미니펄">미니펄 +700원</li>
+                                    <li data-value="펄">펄 +600원</li>
+                                    <li data-value="화이트펄">화이트펄 +700원</li>
+                                    <li data-value="코코넛">코코넛 +700원</li>
+                                    <li data-value="알로에">알로에 +700원</li>
+                                    <li data-value="밀크폼">밀크폼 +700원</li>
+                                    <li data-value="치즈폼">치즈폼 +700원</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>                          
+                        <div id="order_form">
+                            <div class="order_contentwrap">
+                                <p>그릭 요거트 & 자몽 밀크티 크러쉬 / 사이즈: L / 당도: 50% / 얼음: 50% / 토핑: 펄(+500원)</p>
+                                <button></button>
+                            </div>
+                            <div class="order_optionwrap">
+                                <div class="order_amount">
+                                    <button></button>
+                                    <div>1</div>
+                                    <button></button>
+                                </div>
+                                <p class="order_price">7,000원</p>
+                            </div>
+                        </div>
+                        <div id="orderbtn_wrap">
+                            <button id="order_btn">주문하기</button>
+                            <button id="cart_btn">장바구니</button>
+                            <button id="wish_btn">&#9825;</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- 메뉴인포랩 끝 -->
+            <div class="detailview_wrap">
+                <div class="detailview_tab">
+                    <ul class="tabbutton_list">
+                        <li>
+                            <button>상세정보</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detailview_section">
+                    <div class="detailcontents_wrap">
+                        <div class="dc_imgwrap"></div>
+                        <div class="dc_textwrap">
+                            <p class="dc_name">딸기 말차 밀크티</p>
+                            <p class="dc_text">
+                                상큼달콤한 리얼 딸기와 향긋한 얼그레이가 들어간 밀크티에 쌉싸름한 녹차폼이 더해져 봄의 싱그러움을 담은 시즌 한정 음료
+                            </p>
+                            <div class="dc_nutrition">
+                                <div class="nut_titlewrap">
+                                    <p class="nut_title">제품 영양정보</p>
+                                    <p class="nut_standard">기준 사이즈 : L</p>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>메뉴명</th>
+                                        <th>일회제공량(ml)</th>
+                                        <th>열량(kcal)</th>
+                                        <th>당류(g)</th>
+                                        <th>단백질(g)</th>
+                                        <th>포화지방(g)</th>
+                                        <th>나트륨(mg)</th>
+                                        <th>카페인(mg)</th>
+                                    </tr>
+                                    <tr>
+                                        <th>딸기 말차 밀크티</th>
+                                        <td>473</td>
+                                        <td>283</td>
+                                        <td>33</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>176</td>
+                                        <td>54</td>
+                                    </tr>
+                                </table>
+                                <p class="nut_warning">* 알레르기 유발 식품 : 우유, 대두</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 컨텐츠영역 끝 -->
+    <!-- 하단영역 시작 -->
+    <div id="footer_wrap">
+        <footer>
+            <h2 class="hidden">하단메뉴</h2>
+            <div class="ft_inner">  
+                <div class="ft_logo_sns">
+                    <a href="#">GONGCHA</a>
+                    <div class="ft_sns">
+                        <a href="https://www.facebook.com/GongCha.Korea" target="_blank">페이스북</a>
+                        <a href="https://www.instagram.com/gongcha_korea/" target="_blank">인스타그램</a>
+                        <a href="https://pf.kakao.com/_Cywfxb" target="_blank">카카오톡</a>
+                    </div>
+                </div>
+                <div class="ft_info_wrap">
+                    <div class="ft_menu">
+                        <ul class="ft_menu_list">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft_info">
+                        <address>
+                            <p>(주)공차코리아 서울 종로구 종로33길 15, 8층</p>
+                            <p>사업자등록번호 214-88-84534</p>
+                            <p>통신판매번호 2020-서울종로-0966</p>
+                        </address>
+                        <p class="copy">©GONGCHA KOREA CO.,LTD All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 하단영역 끝 -->
+</body>
+</html>
