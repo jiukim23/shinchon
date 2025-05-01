@@ -1,5 +1,4 @@
 window.addEventListener('load',()=>{
-    // const header=document.querySelector('header')
     const menubtn=document.querySelector('.mobilemenu_btn')
     const menuwrap=document.querySelector('#mobilemenu')
     const menuLi=document.querySelectorAll('.mobilemenu_list>li')

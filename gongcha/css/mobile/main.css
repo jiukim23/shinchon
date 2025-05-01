@@ -2,21 +2,26 @@ main{
     width:100%;
 }
 section{
-    margin-bottom:42px;
+    margin-bottom:24px;
 }
+/* 비주얼섹션 시작 */
 #visualsection{
     width:100%;
     height:600px;
     background:burlywood;
     display: none;
 }
+/* 비주얼섹션 끝 */
+/* 메뉴섹션 시작 */
 #menusection{
     width:100%;
     min-height:600px;
-    background:pink;
     display:flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    padding:24px 0px;
+    overflow: hidden;
 }
 .section_title{
     font:600 20px 'pretendard';
@@ -26,7 +31,6 @@ section{
 nav.menubtn{
     width:91.11%;
     height:20px;
-    background:skyblue;
     margin-bottom:68px;
 }
 ul.menubtn_list{
@@ -36,28 +40,50 @@ ul.menubtn_list{
     justify-content: space-between;
     font:600 16px 'pretendard';
 }
+ul.menubtn_list>li>button{
+    position: relative;
+    left:0px;
+    top:0px;
+}
+ul.menubtn_list>li>button::after{
+    content: "";
+    display: block;
+    width:100%;
+    height:2px;
+    background: none;
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+}
+ul.menubtn_list>li.selected>button{
+    color:#a1011b;
+}
+ul.menubtn_list>li.selected>button::after{
+    background:#a1011b;
+}
 div#menu_container{
     width: 100%;
-    height:480px;
-    background: powderblue;
+    height:460px;
     position: relative;
+    left:0px;
+    top:0px;
+    z-index: 1;
+    overflow: visible;
 }
 ul.menucard_list{
     width:100%;
     height:394px;
-    background:red;
 }
 ul.menucard_list>li.swiper-slide{
-    /* width: 267px;
-    height: 394px; */
-    width:74.14%;
+    width: 267px;
+    /* width:74.14%; */
     height:394px;
     overflow: hidden;
 }
 div.menucard_inner{
     width:100%;
     height:100%;
-    background: #D9D9D9;
+    background:#faedda;
     text-align: center;
     font-size: 18px;
     display: flex;
@@ -97,9 +123,14 @@ div.menucard_inner{
 }
 .swiper-slide-active{
     transform: translateY(-20px);
-    /* z-index:1; */
+    z-index:1;
 }
-
+.swiper-slide-active .menucard_img{
+    translate: 0px 144px;
+}
+.swiper-slide-next, .swiper-slide-prev {
+    transform: translateY(0); /* 이전, 다음 슬라이드는 기본 위치 */
+  }
 p.menucard_name{
     font:bold 14px 'pretendard';
     margin-bottom:20px;
@@ -113,3 +144,116 @@ span.menucard_img{
     translate: 0px 284px;
     transition: 0.3s;
 }
+/* 메뉴섹션 끝 */
+/* 베스트메뉴 주문방법 시작 */
+.colorsection{
+    width:95%;
+    height:276px;
+    box-sizing: border-box;
+    padding:24px 0px;
+}
+.redname{
+    display:inline-block;
+    font:bold 16px 'pretendard';
+    color:#a1011b;
+    border-bottom:solid 2px #a1011b;
+    padding-bottom:4px;
+    margin-bottom:16px;
+}
+.section_btn{
+    display: inline-block;
+    font:500 14px/20px 'pretendard';
+    position: relative;
+    left:0px;
+    top:0px;
+}
+.section_btn::after{
+    content:"";
+    display:block;
+    width:20px;
+    height:20px;
+    background:url(/gongcha/images/mobilesection_btn.svg)no-repeat center;
+    position: absolute;
+    right:-28px;
+    top:0px;
+}
+.sectioninner_wrap{
+    width:100%;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+#bestsection{
+    background:#EBF3DF;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+#bestsection>h2{
+    margin-bottom:8px;
+}
+.bestmenu_img{
+    width:43%;
+    height:186px;
+    background:url(/gongcha/images/mobilebestmenu.png)no-repeat center;
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+.bestmenu_inner{
+    width:59.9%;
+    position: absolute;
+    right:16px;
+    margin-top:40px;
+}
+.bm_text{
+    font:500 14px/20px 'pretendard';
+    margin-bottom:20px;
+}
+#howtoordersection{
+    background:#D8E9F5;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-left:auto;
+    margin-right:0px;
+}
+.howtoorder_inner{
+    width:69.76%;
+    padding:4px 16px;
+    box-sizing: border-box;
+    /* position: absolute;
+    left:0px;
+    top:0px; */
+    /* 앱솔루트로 띄우면 부모의 높이값이 없어짐. 그럼 howtoorder_img 위치를 잡기 어려움 */
+}
+.order_text{
+    font:500 14px 'pretendard';
+    margin-bottom:56px;
+}
+.howtoorder_img{
+    display: block;
+    width:46.51%;
+    height:132px;
+    background:url(/gongcha/images/mobilehowtoorder.png)no-repeat center;
+    position: absolute;
+    right:16px;
+    bottom:-24px;
+}
+/* 베스트메뉴 주문방법 끝 */
+/* 배너섹션 시작 */
+#bannersection_wrap{
+    width:100%;
+    height:312px;
+    box-sizing: border-box;
+    padding:28px 20px;
+}
+.bannersection{
+    width:100%;
+    height:120px;
+}
+#deliverysection{
+    background:#F0EDEB;
+    margin-bottom:16px;
+}
+#storesection{
+
+    background:black;
+}
+/* 배너섹션 끝 */

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 20,
+        // loop: true, 이거 살리면 바닐라스크립트 작동 안됨.. 왜?!
         pagination: {
           el: ".swiper-pagination",
           type: "custom",
@@ -18,5 +19,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             `;
           },
         },
+        effect:"Slide"
       });
 })

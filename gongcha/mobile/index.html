@@ -94,7 +94,7 @@
             <nav class="menubtn">
                 <h3 class="hidden">메뉴 카테고리</h3>
                 <ul class="menubtn_list">
-                    <li>
+                    <li class="selected">
                         <button>NEW MENU</button>
                     </li>
                     <li>
@@ -123,23 +123,23 @@
                     </li>
                     <li class="swiper-slide">
                         <div class="menucard_inner">
-                            <p class="menucard_name">납작 복숭아 아이스티 얼그레이</p>
+                            <p class="menucard_name">츄잉 망고 밀크</p>
                             <span class="menucard_en">
-                                PEACH<br>EARL<br>GREY
+                                CHEWING<br>MANGO<br>MILK
                             </span>
                             <span class="menucard_img">
-                                <img src="/gongcha/images/menu_peachearlgrey.png" alt="피치얼그레이">
+                                <img src="/gongcha/images/menu_mango.png" alt="츄잉망고밀크">
                             </span>
                         </div>
                     </li>
                     <li class="swiper-slide">
                         <div class="menucard_inner">
-                            <p class="menucard_name">납작 복숭아 아이스티 얼그레이</p>
+                            <p class="menucard_name">그릭 요거트 & 자몽 밀크티 크러쉬</p>
                             <span class="menucard_en">
-                                PEACH<br>EARL<br>GREY
+                                GREEK<br>GRAPE<br>FRUIT
                             </span>
                             <span class="menucard_img">
-                                <img src="/gongcha/images/menu_peachearlgrey.png" alt="피치얼그레이">
+                                <img src="/gongcha/images/menu_greek01.png" alt="그릭요거트자몽밀크티크러쉬">
                             </span>
                         </div>
                     </li>
@@ -147,18 +147,48 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section id="bestsection">
+        <section id="bestsection" class="colorsection">
             <h2 class="section_title">BEST MENU</h2>
+            <div class="sectioninner_wrap">
+                <span class="bestmenu_img"></span>
+                <div class="bestmenu_inner">
+                    <p class="bm_name redname">
+                        우롱티+코코넛+밀크폼
+                    </p>
+                    <p class="bm_text">
+                        깊고 고소한 우롱차에 코코넛 젤리와 달콤짭쪼롬한 밀크폼을 올려 다양한 식감과 함께 부드럽게 즐기는 오리지널티
+                    </p>
+                    <a href="#" class="section_btn bm_btn">
+                        자세히 보기
+                    </a>
+                </div>
+            </div>
         </section>
-        <section id="howtosection">
+        <section id="howtoordersection" class="colorsection">
             <h2 class="section_title">HOW TO ORDER</h2>
+            <div class="sectioninner_wrap">
+                <div class="howtoorder_inner">
+                    <p class="order_name redname">
+                        공차가 처음이신가요?
+                    </p>
+                    <p class="order_text">
+                        공차는 취향에 맞게 토핑, 당도, 얼음량까지 맞춤주문 가능합니다.
+                    </p>
+                    <a href="#" class="section_btn order_btn">
+                        자세히 보기
+                    </a>
+                </div>
+                <span class="howtoorder_img"></span>
+            </div>
         </section>
-        <section id="deliverysection">
-            <h2 class="hidden">배달서비스</h2>
-        </section>
-        <section id="storesection">
-            <h2 class="hidden">가까운매장</h2>
-        </section>
+        <div id="bannersection_wrap">
+            <section id="deliverysection" class="bannersection">
+                <h2 class="hidden">배달서비스</h2>
+            </section>
+            <section id="storesection" class="bannersection">
+                <h2 class="hidden">가까운매장</h2>
+            </section>
+        </div>
     </main>
     <footer>
         <h2 class="hidden">하단메뉴</h2>
