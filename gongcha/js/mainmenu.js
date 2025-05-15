@@ -36,10 +36,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         }})
         gsap.to(headerWrap,{height:88,duration:0.2,ease:'power1.out'})
 
-        if(selectedMenu!=null){
-            selectedMenu.classList.remove('selected')
+       // if(selectedMenu!=null){
+            selectedMenu?.classList.remove('selected')
             selectedMenu=null
-        }
+        //}
+
+        
     }
 
 })

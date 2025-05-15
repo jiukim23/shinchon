@@ -1,0 +1,261 @@
+/* 기본설정 시작 */
+body,html{
+    height:100%;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+button{
+    all:unset;
+    cursor: pointer;
+}
+.hidden{
+    width:1px;
+    height:1px;
+    font-size:0px;
+    line-height:0px;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+/* 기본설정 끝 */
+/* 상단영역 시작 */
+#header_wrap{
+    width:100%;
+    height:108px;
+    /* 닫 108px 펼 164px */
+    background:white;
+    /* box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 999;
+}
+header{
+    width:93.33%;
+    height:100%;
+    background:white;
+    display: flex;
+    justify-content: space-between;
+    padding:24px 0px;
+    box-sizing: border-box;
+}
+h1#logo{
+    width:160px;
+    height:60px;
+    background:url(/knotted/images/logo.png)no-repeat center;
+    background-size:cover;
+    text-indent:-9999px;
+}
+nav#mainmenu{
+    width:784px;
+    height:20px;
+    /* background:skyblue; */
+    margin-top:16px;
+}
+#mainmenu_list{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+}
+#mainmenu_list>li{
+    text-align: center;
+}
+#mainmenu_list>li>a{
+    font:500 16px 'pretendard';
+    color:#2c2c2c;
+}
+nav#loginmenu{
+    width:120px;
+    height:20px;
+    margin-top:16px;
+}
+.submenu_list{
+    display: none;
+    width:100%;
+    min-height:32px;
+    padding:12px 0px;
+    box-sizing: border-box;
+}
+.submenu_list>li{
+    width:100%;
+    text-align:center;
+    margin-bottom:8px;
+}
+.submenu_list>li>a{
+    font:500 14px 'pretendard';
+    color:#3c3c3c;
+}
+.loginmenu_list{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content:space-between;
+}
+.loginmenu_list>li>a{
+    font:500 16px 'pretendard';
+    color:#ffa2cb;
+}
+/* 상단영역 끝 */
+/* 하단영역 시작 */
+div#footer_wrap{
+    width:100%;
+    height:1000px;
+    border-radius: 64px 64px 0px 0px;
+    background:#bee1f0;
+    margin-top:80px;
+}
+footer{
+    width:100%;
+    height:100%;
+    position:relative;
+    left:0px;
+    top:0px;
+}
+svg{
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
+}
+svg.logo_box{
+    width:408px;
+    left:50%;
+}
+div.kakao_wrap{
+    position: relative;
+    left:0px;
+    top:0px;
+    text-align: center;
+    padding:100px 0px 160px;
+    box-sizing: border-box;
+}
+div.kakao_wrap>p{
+    color:#3c3c3c;
+}
+p.kakao_title{
+    font:600 48px 'pretendard';
+}
+p.kakao_text{
+    font:400 20px 'pretendard';
+    margin-top:64px;
+    margin-bottom:32px;
+}
+a.kakao_btn{
+    display: inline-block;
+    width:156px;
+    height:52px;
+    background:#ffec9f;
+    border-radius: 64px;
+    text-align:center;
+    font:600 20px/52px 'pretendard';
+    color:#3c3c3c;
+}
+div.info_wrap{
+    position: relative;
+    left:0px;
+    top:0px;
+    display: flex;
+    box-sizing:border-box;
+    padding:0px 64px;
+}
+h3.info_title{
+    font:600 16px 'pretendard';
+    color:#2c2c2c;
+    margin-bottom:24px;
+}
+.info_company>div{
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.info_company ul{
+    width:auto;
+}
+.info_company ul>li{
+    font:400 16px 'pretendard';
+    color: #3c3c3c;
+    margin-top:12px;
+}
+.info_list{
+    margin-right:32px;
+}
+.eg_list li:last-child{
+    font-size:12px;
+}
+div.info_social{
+    margin-left:48px;
+}
+.info_social ul{
+    margin-bottom:40px;
+}
+.info_social ul>li{
+    font:400 16px 'pretendard';
+    color: #3c3c3c;
+    margin-top:12px;
+}
+.social_list img{
+    width:16px;
+    height:16px;
+    margin-right:4px;
+}
+.social_list>li>a{
+    font:400 16px 'pretendard';
+    color: #3c3c3c;
+}
+div.ft_bottom_wrap{
+    position: relative;
+    left:0px;
+    top:0px;
+    width:100%;
+    padding:0px 64px;
+    box-sizing: border-box;
+}
+ul.ft_bottom_list{
+    width:100%;
+    margin-top:48px;
+    margin-bottom:32px;
+    display: flex;
+}
+ul.ft_bottom_list>li{
+    margin-right:33px;
+    position: relative;
+}
+ul.ft_bottom_list>li::after{
+    content:"";
+    display:block;
+    width:1px;
+    height:20px;
+    background:#3c3c3c;
+    position: absolute;
+    right:-16px;
+    top:0px;
+}
+ul.ft_bottom_list>li:last-child::after{
+    display: none;
+}
+ul.ft_bottom_list>li>a{
+    display: block;
+    font:400 16px/20px 'pretendard';
+    color: #3c3c3c;
+}
+/* 하단영역 끝 */
+/* aside button */
+aside{
+    /* display: none; */
+    position:fixed;
+    right:30px;
+    bottom:30px;
+}
+aside button{
+    width:56px;
+    height:56px;
+    border-radius: 24px;
+    background:url(/knotted/images/cs_btn.png)no-repeat center;
+    background-size:cover;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
